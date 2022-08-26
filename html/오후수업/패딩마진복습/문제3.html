@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .빽다방{width: 350px;
+                height: 440px;
+                text-align:center;
+                background: gray;
+                margin: 100px auto;
+                padding: 3px;}
+        .ice{text-align: left;
+              padding-left: 10%;
+              margin-top: 10px;}
+        .size{text-align: left;
+              padding-left: 10%;
+              margin-top: 10px;}      
+        #menu{width: 280px;
+              height: 25px;
+              margin-top: 10px;}
+        input[type=number]{width: 270px;
+              height: 20px;
+              margin-top: 10px;} 
+        #주문{margin-top:10px;
+              padding: 0 10px 10px 0;
+              }
+        .주문완료{width: 280px;
+                 height: 25px;
+                 background-color:rgb(44, 114, 219);color: white;
+                 border: none;
+                 margin-top: 10px;}      
+        .주문완료:hover{background-color: white; color: rgb(44, 114, 219);
+                       cursor: pointer; transition: 1.5s; }
+
+ 
+                
+    </style>
+</head>
+<body>
+    <div class="빽다방">
+       <h2>빽다방 메뉴</h2> 
+            <select id="menu">
+                <option class="메뉴판">메뉴를 선택해주세요.</option>
+                <option class="메뉴판">아메리카노</option>
+                <option class="메뉴판">아메리카노</option>
+            </select>
+        <div class="ice">    
+            ICE <input type="radio" name="type">
+            HOT <input type="radio" name="type">
+        </div>
+        <div class="size">
+            L size <input type="radio" name="size">
+            M size <input type="radio" name="size">
+        </div>
+        <input type="number" list="수량" placeholder="수량을 입력해주세요">
+        <div class="추가주문">
+            <textarea name="주문" id="주문" cols="36" rows="10" placeholder="추가 사항이 있으면 적어주세요."></textarea>
+        </div>
+        <div >
+            <input type="button" value="주문 완료" placeholder="주문 완료" class="주문완료">
+        </div>
+
+    </div>
+</body>
+</html>

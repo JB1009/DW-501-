@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="yourId" type="text" placeholder="아이디입력">
+    <input id="yourPw" type="password" placeholder="비밀번호입력">
+    <input id="yourRePw" type="password" placeholder="비밀번호 재입력">
+    <input id="yourEmail" type="email" placeholder="이메일입력">
+    <button onclick="dojoin()">회원 가입</button>
+</body>
+<script>
+    function dojoin(){//함수시작
+        var data = document.getElementById('yourId').value;
+        if(data == ''){
+            alert('고객님 아이디를 입력해주세요.')
+            document.getElementById('yourId').focus();
+            return false;//return은 더이상 아래코드를 실행하지않는다.
+        }
+       var password = document.getElementById('yourPw').value;
+       if(password == ''){
+           alert('고객님 비밀번호를 입력해주세요.')
+           document.getElementById('yourPw').focus(); 
+           return false;
+        }
+        var password = document.getElementById('yourRePw').value;
+       if(password == ''){
+           alert('고객님 비밀번호를 재입력해주세요.')
+           document.getElementById('yourRePw').focus(); 
+           return false;
+        }
+       var email = document.getElementById('yourEmail').value;
+       if(email == ''){
+           alert('고객님 이메일을 입력해주세요')
+           document.getElementById('yourEmail').focus();
+           return false;
+       }
+       alert('회원가입 완료')
+}//함수끝
+</script>
+</html>

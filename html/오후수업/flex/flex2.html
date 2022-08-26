@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    #containar{justify-content: space-around;}
+
+    .head{background-color: blue;
+          height: 200px;
+          flex-basis: 20%;}
+    
+    .cent{background-color: violet;
+          height: 400px;
+          display: flex;
+          flex-basis: 60%;}
+
+    .foot{background-color: brown;
+         height: 200px;
+         flex-basis: 20%;}
+
+    .nav{background-color: azure;
+         flex-basis: 15%;
+         border: 1px solid black;}
+    
+    .section{background-color: azure;
+         flex-basis: 60%;
+        }
+
+    .aside{background-color: azure;
+          flex-basis: 15%;
+          border: 1px solid black;}
+ 
+</style>
+
+
+<body>
+    <div id="containar">
+        <div class="head"> header영역</div>
+        <div class="cent"> center영역
+            <div class="nav"></div>
+            <div class="section"></div>
+            <div class="aside"></div>
+        </div>
+        <div class="foot"> footer영역</div>
+    </div>
+</body>
+</html>

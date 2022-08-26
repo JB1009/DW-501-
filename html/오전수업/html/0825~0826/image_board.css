@@ -1,0 +1,16 @@
+#image_list{width: 1200px;
+            height:720px;
+            margin-top: 30px;}
+
+.line_wrap{display: flex;
+           width: 1200px;
+           height: 350px;}
+
+.cell{width: 380px;
+      height: 350px;}
+
+/* 이미지 각 영역 스타일 */
+.cell_one{padding-right: 20px;}
+.cell_two{padding-left: 10px;
+          padding-right: 10px;}
+.cell_three{padding-left: 20px;}
