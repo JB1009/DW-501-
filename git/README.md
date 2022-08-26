@@ -10,6 +10,10 @@
     실무에가면 git 혹은 svn이라는 프로그램을 사용하는데,
     둘다 프로젝트를 관리해주는 프로그램이며 명령어는 비슷하다.
 
+### git 설정
+- git config -- global user.name '사용자이름'
+- git config -- global user.gmail '사용자이메일'
+
 ### git 명령어
     init : 저장소 생성
     add : 작업한 파일혹은 폴더 추가
