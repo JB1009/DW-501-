@@ -63,12 +63,14 @@
 #item_pay_top{width: 182px;
               margin: 3.5px;
               padding: 3px;
-              height: 200px;
+              height: 100px;
               border: 1px solid rgb(230, 230, 230);}               
 
 .item_pay_name{font-weight: 700;}
 
-.item_among{display: flex;}
+.item_among{display: flex;
+            margin-top: 10px;
+            margin-bottom: 10px;}
 
 .item_among button{width: 30px;
                    height: 36px;
@@ -89,18 +91,92 @@
      -webkit-appearance: none;
      margin: 0;}
 
+/* 사이드바 하단부 */
+#item_pay_money{margin-top: 200px;
+                width: 100%;}
 
+#item_pay_money span{display: inline-block;}
 
+.total_money{width: 182px;
+             margin: 0 auto;
+             height: 30px;
+             color: red;}
 
+.total{width: 60px;
+       line-height: 30px;}
 
+.pay_money{width: 116.3px;
+           line-height: 30px; 
+           text-align: right;
+           font-weight: 700;}
 
+.line_deco{width: 182px;
+           margin: 0 auto;
+           margin-top: 10px;
+           margin-bottom: 5px;}
 
+.coupon{width: 182px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 10px;}
 
+.coupon_change{width: 64px;}
 
+.coupon_change button{width: 50px;
+                      height: 25px;
+                      font-size: 10px;
+                      padding: 0;
+                      margin-left: 14px;
+                      background: white;
+                      border: 1px solid red;
+                      color: red;
+                      position: relative;
+                      top: -7px;}
 
+.cart_buy{width: 182px;
+          margin: 0 auto;}
 
+.cart_buy a{text-decoration: none;
+            display: inline-block;
+            border: 1px solid red;}
 
+#cart{color: red;
+      height: 50px;
+      line-height: 50px;}
 
+#buy{color: white;
+     height: 50px;
+     line-height: 50px;
+     background: red;}      
+
+#gift{color: white;
+      height: 50px;
+      line-height: 50px;
+      background: red;
+      width: 36px;
+      text-align: center;}
+
+#detail_view{width: 800px;
+             height: auto;
+             margin-top: 50px;}
+
+.item_img{width: 800px;
+          height: 300px;}
+
+.item_img img{max-width: 800px;
+              height: 300px;}
+
+.item_detail img{width: 800px;
+                 height: 600px;}
+
+.delivery_img{width: 100%;
+              height: 200px;}
+
+.exchange_return{width: 100%;
+                 height: 400px;}
+              
+.item_info_post{width: 100%;
+                height: 500px;}
 
 
 
