@@ -40,37 +40,17 @@ flex : 컨테이너와 아이템으로 구성
 
 flex
 
+repositories : 폴더들
 
+.github 다운받는법
 
-                    <tr class="팀이름">
-                        <td>
-                            <img src="SSG.png" alt="">
-                        </td>
-                        <td>
-                            <img src="LG.png" alt="">
-                        </td>
-                        <td>
-                            <img src="키움.png" alt="">
-                        </td>
-                        <td>
-                            <img src="KT.png" alt="">
-                        </td>
-                        <td>
-                            <img src="KIA.png" alt="">
-                        </td>
-                        <td>
-                            <img src="NC.png" alt="">
-                        </td>
-                        <td>
-                            <img src="롯데.png" alt="">
-                        </td>
-                        <td>
-                            <img src="두산.png" alt="">
-                        </td>
-                        <td>
-                            <img src="삼성.png" alt="">
-                        </td>
-                        <td>
-                            <img src="한화.png" alt="">
-                        </td>
-                    </tr>
+1 git clone 폴더의 주소입력
+
+1.티스토리
+2.개발블로그(사이트주소에 개발용어가 들어가있음)
+~~~stack
+   stack overflow
+   what is () *in* ()
+~~~
+
+z index <- z축 값
