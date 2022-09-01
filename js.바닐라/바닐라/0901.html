@@ -10,6 +10,33 @@
     
 </body>
 <script>
-    
+    // 배열
+    // [] 배열 < array
+    var array = ['바나나','딸기','사과','수박'];
+        console.log('배열을 출력하겠습니다.');
+        console.log(array[0]);
+        console.log(array[1]);
+        console.log(array[2]);
+        console.log(array[3]);
+        console.log('배열길이는 : ' + array.length)
+
+        //배열은 for문하고 같이 사용한다.
+        //for문을 이용해서 배열 출력하기.
+        for(var i=0;i<array.length;i++){
+            // console.log(array[i]);
+            var x = array[i];
+            console.log(x);
+        }
+            console.log('출력종료');
+
+        //문제1.  for문을 이용해서 아래배열 짝수 개수 구하기.
+        var count = 0;
+        var array2 = [1,4,8,10];
+        for(var i=1;i<array2.length;i++){
+            if(array2[i]%2 == 0){
+                count++;
+            }
+        }
+        console.log(count)
 </script>
 </html>
