@@ -1,0 +1,15 @@
+#header{margin: 0 auto;
+    width: 1200px;
+    height: 100px;
+    display: flex;}
+
+.logo_img img{width: 150px;}
+
+.menu{display: flex;
+      margin: 0 auto;}
+
+.menu div{margin-top: 50px;
+          font-size: 15px;}
+
+.login{
+       display: flex; }       
