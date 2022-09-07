@@ -1,0 +1,146 @@
+#wrap{width: 100%;
+      height: auto;}
+
+#top{width: 1200px;
+     height: 80px;
+     margin: 0 auto;
+     display: flex;}
+
+#logo img{padding-top: 10px;
+          width: 240px;
+          margin-left: 40px;}     
+
+#top_menu ul{display: flex;}
+
+#top_menu ul li{list-style-type: none;
+                font-size: 16px;
+                font-weight: 700;
+                margin-right: 30px;}
+
+#main_logo{width:600px;}
+
+#main_logo img{width: 200px;
+               float: right;}
+
+#mid{width: 1200px;
+     margin: 0 auto;
+    display: flex;
+    }
+
+#login{
+       width: 300px;
+       height: 550px;
+       margin-top: 30px;
+       margin-left: 20px;}
+
+.id{display: flex;
+    padding: 0 20px;
+    margin-top: 20px ;}
+
+.id div{font-size: 14px;
+        font-weight: 600;
+        margin-left: 5px;}
+
+.id input{border-radius: 5px;
+          border: 1px solid #999;
+          margin-left: 20px;
+          width: 170px;
+          text-align: center;}
+
+.login{height: 20px;
+       position: relative;}
+
+.pw{display: flex;
+    margin-top: 10px;}
+        
+.pw div{font-size: 14px;
+        font-weight: 600;
+        margin-left: 24px;}
+        
+.pw input{width: 170px;
+          border-radius: 5px;
+          margin-left: 7px;
+          text-align: center;
+          border: 1px solid #999;}
+        
+.menu_login{width: 240px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-top: 10px;
+            text-align: center;}
+
+.menu_login a{text-decoration: none;
+              color: #999;}
+
+.menu_tap{width: 300px;}
+
+.menu_tap div{width: 240px;
+              border-radius: 20px;
+              border: 1px solid #999;
+              margin-left: 20px;
+              margin-top: 50px;
+              text-align: center;             
+              padding: 8px 0;}
+
+.menu_tap div a{text-decoration: none;
+                color: #999;}
+
+.id_search{width: 240px;
+           margin-left: 25px;
+           margin-top: 10px;}
+
+.id_search a{text-decoration: none;
+             color: black;}
+
+.mainpic{width: 840px;
+         position: relative;}
+
+.sld{overflow: hidden;}
+
+   
+
+.mainpic .img1{width: 790px;
+             height: 400px;
+             position: absolute;
+             top: 30px;
+             left: 20px;}
+
+.mainpic .img2{width: 790px;
+               height: 140px; 
+               bottom: 0px;
+               position: absolute;
+               left: 20px;}
+
+.QnA{position: absolute;
+     bottom: 40px;
+     margin-left: 17px;
+     width: 790px;
+     height: 100px;
+     display: flex;}
+
+.QnA div{padding: 15px 30px;
+         text-align: center;}
+
+.font{margin-top: 10px;
+      font-size: 18px;
+      font-weight: 700;}
+
+.font2{font-size: 12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
