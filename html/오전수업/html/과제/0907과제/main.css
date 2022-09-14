@@ -218,13 +218,13 @@ label.right {
     100% {left:0%;}
 }
 
-.bottom{width: 1050px;
-        margin-left: 18%;
+.bottom{width: 1200px;
         font-size: 11px;
-        border-top: 1px solid #777;
-        }
+        margin:0 auto;}
 
-.bot{margin-left: 20px;}
+.bot{margin-left: 20px;
+    border-top: 1px solid #777;
+    width: 1070px;}
 
 .bot_top{margin-top: 20px;}
 

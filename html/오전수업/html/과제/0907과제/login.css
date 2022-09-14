@@ -55,12 +55,33 @@
 .HW{font-weight: 500;
     font-size: 23px;}
 
- 
+.end{width: 70px;
+     margin: 0 auto;
+     }
 
+.end a{text-decoration: none;
+       color: black;}
 
-
-
-
+.bottom{width: 1200px;
+        font-size: 11px;
+        margin:50px auto;}
+  
+.bot{margin-left: 20px;
+    border-top: 1px solid #777;
+    width: 1070px;}
+  
+.bot_top{margin-top: 20px;}
+  
+.bot a{text-decoration: none;
+       color: black; 
+       margin-right: 10px;}
+  
+.a_tag{width: 20px;
+       padding: 2px;
+       border-radius: 100px;
+       background: #777;}
+  
+.bot_mid{margin-top: 5px;}
 
 
 
