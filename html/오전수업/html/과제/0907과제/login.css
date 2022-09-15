@@ -18,7 +18,7 @@
               margin-right: 30px;}
 
 #main_logo{width:600px;}
-
+#main_menu:hover  .event{cursor: pointer;}    
 #main_logo img{width: 200px;
                float: right;}
 
@@ -50,7 +50,7 @@
             #main_menu .sub{display: none;
                             }
             
-            #main_menu:hover .sub{display: block;
+                    #main_menu:hover .sub{display: block;
                                 background-color: whitesmoke;
                                 height: 240px;
                                 z-index: 1;}

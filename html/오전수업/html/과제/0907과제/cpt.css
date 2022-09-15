@@ -45,12 +45,15 @@
     
     #main_menu .sub{display: none;
                     }
+
+
     
-    #main_menu:hover .sub{display: block;
-                        background-color: whitesmoke;
+#main_menu:hover .sub{display: block;
+                        background-color: white;
                         height: 240px;
-                        z-index: 1;}
-    
+                        z-index: 1;
+                        }
+                        #main_menu:hover  .event{cursor: pointer;}      
     .sub1 li{float: left;
              margin-left: 70px;
              font-size: 10px;}     

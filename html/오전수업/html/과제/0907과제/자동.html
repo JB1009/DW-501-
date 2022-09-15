@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>핸드폰번호 자동 하이픈</h1>
+<p>핸드폰번호 입력시 자동으로 하이픈 입력</p>
+<div>
+  <input type="text" name="cellPhone" id="cellPhone" placeholder="핸드폰번호 입력" maxlength="13" />
+</div>
+</body>
+<script>
+    function autoHypenPhone(str){
+            str = str.replace(/[^0-9]/g, '');
+            var tmp = '';
+            if( str.length < 4){
+                return str;
+            }else if(str.length < 7){
+                tmp += str.substr(0, 3);
+                tmp += '-';
+                tmp += str.substr(3);
+                return tmp;
+            }else if(str.length < 11){
+                tmp += str.substr(0, 3);
+                tmp += '-';
+                tmp += str.substr(3, 3);
+                tmp += '-';
+                tmp += str.substr(6);
+                return tmp;
+            }else{              
+                tmp += str.substr(0, 3);
+                tmp += '-';
+                tmp += str.substr(3, 4);
+                tmp += '-';
+                tmp += str.substr(7);
+                return tmp;
+            }
+            return str;
+        }
+
+var cellPhone = document.getElementById('cellPhone');
+cellPhone.onkeyup = function(event){
+        event = event || window.event;
+        var _val = this.value.trim();
+        this.value = autoHypenPhone(_val) ;
+}
+</script>
+</html>
