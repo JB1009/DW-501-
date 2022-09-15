@@ -19,21 +19,34 @@
               background: pink;
               position: relative;}
 
-/* #main_menu .sub li{width: 0;
-                   height: 0;
-                   line-height: 0;
-                   position: absolute;
-                   top: -10px;}
 
-#main_menu .sub{opacity: 0;} */
+#main_menu .sub1{display: none;}
 
-#main_menu .sub{display: none;
-                }
-
-#main_menu:hover .sub{display: block;
+#main_menu:hover .sub1{display: block;
                       background: lightgoldenrodyellow;
-                      height: 240px;
-                      }
+                      height: 240px;}
+#main_menu .sub2{display: none;}
+     
+#main_menu:hover .sub2{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+
+#main_menu .sub3{display: none;}
+          
+#main_menu:hover .sub3{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+#main_menu .sub4{display: none;}
+               
+#main_menu:hover .sub4{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+#main_menu .sub5{display: none;}
+                    
+#main_menu:hover .sub5{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+                    
 
 
 
