@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="주사위.css">
+</head>
+<body>
+
+
+
+    <h1>2개의 주사위</h1>
+    
+    버튼을 클릭하면 2개의 주사위가 랜덤됩니다<br>
+    
+    <br>
+    <div id="pc_dice">
+        <div id="pc1">
+
+            <img src="주사위1.jpg">
+            <img src="주사위2.png">
+            <img src="주사위3.png"> 
+            <img src="주사위4.jpg">
+            <img src="주사위5.jpg">
+            <img src="주사위6.png">
+
+        </div>
+
+        <div id="pc2">
+            
+            <img src="주사위1.jpg">
+            <img src="주사위2.png">
+            <img src="주사위3.png"> 
+            <img src="주사위4.jpg">
+            <img src="주사위5.jpg">
+            <img src="주사위6.png"><br>
+        </div>
+        <div id="pc3">
+
+            <img src="주사위1.jpg">
+            <img src="주사위2.png">
+            <img src="주사위3.png"> 
+            <img src="주사위4.jpg">
+            <img src="주사위5.jpg">
+            <img src="주사위6.png">
+
+        </div>
+    </div>
+    <div id="user_dice">
+        <div id="user1">
+            
+            <img src="주사위1.jpg">
+            <img src="주사위2.png">
+            <img src="주사위3.png"> 
+            <img src="주사위4.jpg">
+            <img src="주사위5.jpg">
+            <img src="주사위6.png"><br>
+        </div>
+
+        <div id="user2">
+
+            <img src="주사위1.jpg">
+            <img src="주사위2.png">
+            <img src="주사위3.png"> 
+            <img src="주사위4.jpg">
+            <img src="주사위5.jpg">
+            <img src="주사위6.png">
+
+        </div>
+
+        <div id="user3">
+            
+            <img src="주사위1.jpg">
+            <img src="주사위2.png">
+            <img src="주사위3.png"> 
+            <img src="주사위4.jpg">
+            <img src="주사위5.jpg">
+            <img src="주사위6.png"><br>
+        </div>
+    </div>
+
+    <br>
+    
+    <button onclick="dice()">주사위를 굴린다</button>
+    
+    
+ 
+    
+    
+    
+    
+</body>
+   
+<script type="text/javascript">
+    
+    function dice() {
+    
+        var dice1 = Math.floor(Math.random() * 6) +1;
+        var dice2 = Math.floor(Math.random() * 6) +1;
+        var userdice1 = Math.floor(Math.random() * 6) +1;
+        var userdice2 = Math.floor(Math.random() * 6) +1;
+        var cpt = dice1  + dice2;
+        var user = userdice1 + userdice2
+        var cpt1 = document.getElementById("pc1").value; 
+        var cpt2 = document.getElementById("pc2").value; 
+        var cpt1 = document.getElementById("pc3").value; 
+        var user1 = document.getElementById("user1").value; 
+        var user2 = document.getElementById("user2").value; 
+        var user3 = document.getElementById("user3").value; 
+        if(cpt > user){
+           if(userdice1 == userdice2){
+                user1.innerhtml="컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + "유저 승 "  + " user1 : " +userdice1 +  " user2 : " +userdice2 
+            }
+            else{
+                user1.innerhtml="컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + "유저 승 "  + " user1 : " +userdice1 +  " user2 : " +userdice2  
+            }
+        }
+        else if(cpt == user){
+            document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 무승부")
+        }
+        else{
+            if(dice1 == dice2){
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 "   + " cpt1 : " + dice1 +  " cpt2 : " + dice2)
+            } 
+            else{
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 유저 승 ") 
+            }
+        }
+    
+    
+    
+    
+    
+    </script>
+    
+</html>

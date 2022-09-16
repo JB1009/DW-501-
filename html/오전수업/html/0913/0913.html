@@ -33,7 +33,7 @@
         //     alert('큰수는 : ' + num2)
         // }
 
-        /*var r = Math.floor(Math.random() * 10);
+        // var r = Math.floor(Math.random() * 10);
         // 랜덤함수 0.0000000000 ~ 0.9999999999
         // *10 : 0.000 * 10 , 0.114 * 10 , 0,452 * 10
         // 랜덤범위 (1 ~ 10) Math.floor(Math.random() * 10) + 1;
@@ -46,14 +46,14 @@
         // 동전 맞추기 게임
         // 1 = 앞면 2 = 뒷면
         // 랜덤 함수를 사용하여 동전 앞면 뒷면 맞추기  
-        var num = parseInt(prompt('숫자입력'))
-        var coin = Math.floor(Math.random() * 2) +1;
-        if(num == coin){    
-            alert('정답')     
-        }
-        else{
-            alert('오답')
-        } */
+        // var num = parseInt(prompt('숫자입력'))
+        // var coin = Math.floor(Math.random() * 2) +1;
+        // if(num == coin){    
+        //     alert('정답')     
+        // }
+        // else{
+        //     alert('오답')
+        // } 
 
         // 컴퓨터와 주사위게임 
         // 주사위는 던진다.
@@ -67,21 +67,21 @@
         var user = userdice1 + userdice2
         if(cpt > user){
            if(userdice1 == userdice2){
-                alert("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + "유저 승 "  + " user1 : " +userdice1 +  " user2 : " +userdice2) 
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + "유저 승 "  + " user1 : " +userdice1 +  " user2 : " +userdice2) 
             }
             else{
-                alert("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 ") 
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 ") 
             }
         }
         else if(cpt == user){
-            alert("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 무승부")
+            document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 무승부")
         }
         else{
             if(dice1 == dice2){
-                alert("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 "   + " cpt1 : " + dice1 +  " cpt2 : " + dice2)
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 "   + " cpt1 : " + dice1 +  " cpt2 : " + dice2)
             } 
             else{
-                alert("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 유저 승 ") 
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 유저 승 ") 
             }
         }
 
