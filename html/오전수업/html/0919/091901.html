@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #info input{width: 100px;}
+    </style>
+</head>
+<body>
+    <div id="info">
+        <input type="text" id="name" placeholder="이름">
+        <input type="text" id="job" placeholder="직업">
+        <input type="text" id="age" placeholder="나이">
+        <input type="button" onclick="enroll()" value="등록">
+    </div>
+    <hr>
+    <div id="result"></div>
+</body>
+<script>
+    function enroll(){
+        var name = document.getElementById("name").value;
+        var job = document.getElementById("job").value;
+        var age = document.getElementById("age").value;
+        var res = document.getElementById("result");
+        var year = 2022 - parseInt(age) + 1;
+        if(job == "군인" || job == "변호사"){
+            res.innerHTML = "이름 : " + name + " 직업 : " + job + " 나이 : " + age + "세" ;
+        } 
+        else if(job == "공무원"){
+           res.innerHTML = "이름 : " + name + " 직업 : " + job + " 나이 : " + year + "년생" ;
+        }
+    }
+</script>
+</html>

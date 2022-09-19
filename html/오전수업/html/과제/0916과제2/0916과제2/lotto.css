@@ -1,0 +1,53 @@
+.wrap{width: 1000px;
+      height: auto;
+      margin: 100px auto;}
+
+.container{background-color: black;
+           width: 1000px;
+           height: 500px;
+           margin: 0 auto;}
+
+.main{width: 180px;
+      height: 420px;
+      background-color: red;}
+
+.lotto{display: flex;}
+
+.lo1 button{border: none;
+            background-color: red;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-top: 10px;
+            width: 10px;
+            margin-left: 5px;
+            padding-right: 12px;}
+
+.lotto button{
+           border: none;
+            background-color: red;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-top: 10px;
+            width: 7px;
+            margin-left: 4px;           
+            padding-right: 14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
