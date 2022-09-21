@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var out = "user : ";
+        var num31 = 0;
+        var turn = true;
+        var cnt = 0;
+        function input(){
+            if(cnt == 3){
+                alert("3회입력");
+                return;
+            }
+           var num = document.querySelector("#num");
+           
+            if(num.value <= num31 || (!turn && num.value > num31 + 1)){
+                alert("잘못입력했습니다.");
+                return;
+            }
+            turn = true;
+            num31 = num.value;
+            num.value=" ";
+            num.focus();
+            cnt++;
+            out += num31 + " ";
+            if(num31 == 31){
+                complete();
+            }
+        }
+        function complete(){
+            var res = document.querySelector("#result");
+            res.innerHTML = out;//유저출력
+            if(num31 == 31){
+                alert("패배")
+                return;
+            }
+           
+            //com
+            var com = Math.floor(Math.random()*3)+1;
+            out += "<br> com : "
+            var i = 1;
+            while(i <= com){
+                out += ++num31 + " ";
+                if(num31 == 31){
+                    break;
+                }
+                i++
+            }
+
+            res.innerHTML = out;
+            turn = false;
+
+            if(num31 == 31){
+                alert("승리");
+                return;
+            }
+            out += "<br> user : "
+            cnt = 0;
+
+        }
+        function check(){
+            if(window.event.keyCode == 13){
+                input();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" id="num" onkeydown="check()">
+        <input type="button" onclick="input()" value="입력">
+        <input type="button" onclick="complete()" value="입력 완료">
+    </div>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>
