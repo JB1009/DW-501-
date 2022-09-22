@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    //반복문
+    //for(초기값;조건식;증감식){}
+    //랜덤값(범위 1~100;) 중에서 4의배수만 출력
+    // var count = 0;
+    // for(var i=1;i<=20;i++){
+    //     var com = Math.floor(Math.random()*100)+1;
+        
+    //     if(com%4==0){
+    //         document.write("4의배수 : "+ com + "<br>");
+    //     }
+    // }
+    
+    // for(var i=1;i<=10;i++){
+    //     var com_random = Math.floor(Math.random()*10)+1;
+    //     var user =  parseInt(prompt("입력"));
+    //     if(user >= 1 &&  user <= 10){
+    //         if(user == com_random){
+    //             document.write("지뢰 밟음 사망" + "<br>");
+    //             break;
+    //         }
+    //         if(user != com_random){
+    //             document.write("회피성공" + "<br>");
+    //         }
+    //     }else{
+    //         alert("1~10까지 숫자를 입력해주세요");
+    //         i--;
+    //     }
+    // }
+
+    // for(var i=2;i<10;i++){
+    //     document.write(i + "단 시작 <br>");
+    //     for(var j=1;j<10;j++){
+    //         document.write(i + " * " + j + " = " + j*i + "<br>");
+    //     }
+    // }
+    // for(var i=5;i>=1;i--){
+    //     for(var j=1;j<=i;j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>")
+    // }
+    // 비밀번호 찾기
+    // 1. 비밀번호는총 4자리
+    // 2. 비밀번호 각 자리는 1~9까지중 하나
+    // 3. 비밀번호에 중복은 없다.
+    // 4. 4자리 숫자중 첫번째 숫자는 세번째 숫자보다 7크다
+    // 5. 두번째 숫자는 네번째 숫자보다 작다.
+    // 6. 비밀번호를 역순으로 한 숫자와 비밀번호를 더하면 16566이다
+    // 7. 위조건에 맞는 비밀번호 4자리를 출력하시오
+
+    for(var i=1;i<=9;i++){
+        for(var j=1; j<=9;j++){
+            if(i != j){
+                for(var z=1; z<=9;z++){
+                    if(i != z &&j != z){
+                        if(i == z + 7){
+                            for(var y=1;y<=9;y++){
+                                if(i != y && j != y && z != y){
+                                    if(j < y){
+                                        // var num1 = i.toString() + j.toString() + z.toString() + y.toString();
+                                        // var num2 = y.toString() + z.toString() + j.toString() + i.toString();
+                                        // if(parseInt(num1)+parseInt(num2) == 16566){
+                                        //     document.write(num1);
+                                        // }
+                                        var num1 = (i*1000) + (j*100) + (z*10) + y;
+                                        var num2 = (y*1000) + (z*100) + (j*10) + i;
+                                        if(num1+num2 == 16566){
+                                            document.write(num1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+</script>
+</html>
