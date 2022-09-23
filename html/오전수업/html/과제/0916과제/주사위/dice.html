@@ -109,7 +109,8 @@
             count = 0;
         }
         str = setTimeout(start,100);
-
+        var res = document.getElementById("result");
+        res.innerHTML =  " ";
      
 
     }
@@ -247,7 +248,7 @@
             if(com > user){
                 if(user1 == 3 && user2 == 3 && user3 == 3){
                     res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"이겼습니다."
-                }
+                   }
                 else if(user == 3){
                     res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"이겼습니다."
                 }

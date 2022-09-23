@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0;
+             padding: 0;
+             box-sizing: border-box;}
+
+        #wrap{width: 100%;
+              height: auto; 
+              margin: 100px auto;
+              }   
+              
+        #main{
+            width: 1400px;
+            height: 700px; 
+            margin: 0 auto;
+            display: flex;
+        }      
+        #main p{margin-left: 50px;
+                }
+        #user_main{
+            width: 600px;
+            height: 500px;
+            margin-top: 100px;
+            
+        }
+        #com_main{
+            width: 600px;
+            height: 500px;
+            margin-top: 100px;
+            margin-left: 70px;
+            
+        }
+        #user_main .user_bingo{
+            display: flex;
+            width: 500px;
+            margin-left: 50px;
+        }
+        #user_main .user_bingo div{
+            border: 1px solid black;
+            width: 68px;
+            height: 98px;
+            line-height: 98px;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+        #com_main .com_bingo{
+            display: flex;
+            width: 500px;
+            margin-left: 50px;
+        }
+        #com_main .com_bingo div{
+            border: 1px solid black;
+            width: 98px;
+            height: 98px;
+            line-height: 98px;
+            padding-left: 35px;
+        }
+        #result{
+           
+            margin-left: 100px;
+            width: 50px;
+        }
+        #button{
+            margin-top: 380px;
+            margin-left: 92px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <div id="user_main">
+                <p>유저</p>
+                <div class="user_bingo">
+                    <div id="user_num1" onclick="user(asd)"></div>
+                    <div id="user_num2" onclick="user(asd)"></div>
+                    <div id="user_num3" onclick="user(asd)"></div>
+                    <div id="user_num4" onclick="user(asd)"></div>
+                    <div id="user_num5" onclick="user(asd)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num6" onclick="user(asd)"></div>
+                    <div id="user_num7" onclick="user(asd)"></div>
+                    <div id="user_num8" onclick="user(asd)"></div>
+                    <div id="user_num9" onclick="user(asd)"></div>
+                    <div id="user_num10" onclick="user(asd)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num11" onclick="user(asd)"></div>
+                    <div id="user_num12" onclick="user(asd)"></div>
+                    <div id="user_num13" onclick="user(asd)"></div>
+                    <div id="user_num14" onclick="user(asd)"></div>
+                    <div id="user_num15" onclick="user(asd)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num16" onclick="user(asd)"></div>
+                    <div id="user_num17" onclick="user(asd)"></div>
+                    <div id="user_num18" onclick="user(asd)"></div>
+                    <div id="user_num19" onclick="user(asd)"></div>
+                    <div id="user_num20" onclick="user(asd)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num21" onclick="user(asd)"></div>
+                    <div id="user_num22" onclick="user(asd)"></div>
+                    <div id="user_num23" onclick="user(asd)"></div>
+                    <div id="user_num24" onclick="user(asd)"></div>
+                    <div id="user_num25" onclick="user(asd)"></div>
+                </div>
+            </div>
+            <div>
+                <button onclick="che()" id="button">추첨</button>
+                <div id="result">결과</div>
+            </div>
+            <div id="com_main">
+                <p>컴퓨터</p>
+                <div class="com_bingo">
+                    <div id="com_num1"></div>
+                    <div id="com_num2"></div>
+                    <div id="com_num3"></div>
+                    <div id="com_num4"></div>
+                    <div id="com_num5"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num6"></div>
+                    <div id="com_num7"></div>
+                    <div id="com_num8"></div>
+                    <div id="com_num9"></div>
+                    <div id="com_num10"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num11"></div>
+                    <div id="com_num12"></div>
+                    <div id="com_num13"></div>
+                    <div id="com_num14"></div>
+                    <div id="com_num15"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num16"></div>
+                    <div id="com_num17"></div>
+                    <div id="com_num18"></div>
+                    <div id="com_num19"></div>
+                    <div id="com_num20"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num21"></div>
+                    <div id="com_num22"></div>
+                    <div id="com_num23"></div>
+                    <div id="com_num24"></div>
+                    <div id="com_num25"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var user_num = [];
+    var user_div =[];
+    var com_num = [];
+    var com_div = [];
+    var count = 1;
+    function che(){
+        if(count ==1){
+            while (user_num.length < 25){
+                var ran = parseInt(Math.random()*100)+1;
+                if(user_num.indexOf(ran) < 0){
+                    user_num.push(ran);
+                }
+                while(com_num.length<25){
+                    var ran = parseInt(Math.random()*100)+1;
+                    if(com_num.indexOf(ran)<0){
+                        com_num.push(ran);
+                    }
+                }
+                for(var i=0;i<25;i++){
+                    user_div[i] = document.getElementById("user_num"+(i+1));
+                    com_div[i] = document.getElementById("com_num"+(i+1));
+                }
+                for(var i=0;i<com_div.length;i++){
+                    user_div[i].value = user_num[i];
+                    user_div[i].innerHTML = user_num[i];
+                    com_div[i].value = com_num[i];
+                    com_div[i].innerHTML = com_num[i];
+                }
+            }
+            count = 0;
+        }
+        // function user(a){
+        // for(var i=1;i<26;i++){
+        // var user_number = document.getElementById("user_num"+i);
+        // // user_number.style.background = "gray";
+        // console.log(user_number.number);
+        // }
+        //     }
+    }        
+    
+    var set;
+    function bingoClick(uName) {
+        var uNum = uName.value;
+        var udiv = uName.id;
+        var uDiv = document.getElementById(udiv);
+        uDiv.style.background = "gray";
+        uDiv.style.color = "white";
+        for (var i = 0; i < com_num.length; i++) {
+            if (uNum == com_num[i]) {
+                com_div[i].style.background = "gray";
+                com_div[i].style.color = "white";
+            }
+        }
+        clearTimeout(comTurn(), 1000);
+        comFlag = 0;
+    }
+    function comTurn() {
+        if (comFlag == 1) {
+            var randomNum = Math.floor(Math.random() * 25);
+            comDiv[randomNum].style.background = "gray";
+            comDiv[randomNum].style.color = "white";
+            if (cNum == user_num) {
+                user_div[randomNum].style.background = "gray";
+                user_div[randomNum].style.color = "white";
+            }
+            
+        }
+    }
+        
+        
+
+</script>
+</html>

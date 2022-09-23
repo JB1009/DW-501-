@@ -66,7 +66,7 @@
         <div class="top">
             <div class="main">
                 <div class="user_num">
-                    <input type="text" placeholder="번호입력" id="user_num">
+                    <input type="text" placeholder="띄어쓰기로 숫자를 입력해주세요" id="user_num">
                 </div>
                 <div class="com_num">
                     <div id="comp">로또 결과</div>
@@ -87,39 +87,15 @@
         var res = document.getElementById("result");
         var out = "";
         var out1 = "";
-        var lotto_number = [];
-      
-        
-        var a = [];
-    //    for(var i=0;i<6;i++){
-    //     a = Math.floor(Math.random()*45)+1
-    //         for(var j=0;j<1;j++){
-    //             b = Math.floor(Math.random()*45)+1
-    //             if(a != b){
-    //                 out += a + " ";
-                    
-    //             }
-    //         }
-            
-    //    }
-    var lotto_num = [];
-        while(lotto_num.length<6){
-            var n = parseInt(Math.random()*45)+1;
-            if(lotto_num.indexOf(n)<0){
-                lotto_num.push(n);
-                
-            }
-        }
-        // 로또 번호 오름차순 정렬
-        lotto_num.sort((a, b) => a - b);
+    
     
         // 확인
-        com_number.innerHTML= lotto_num;
+        
         // com_num.innerHTML= lotto_num;
         // com_number.innerHTML=out;
         var user = document.getElementById("user_num");
-        var user01 = user.value
-        var user_number = user01.split(" ")
+        var user01 = user.value;
+        var user_number = user01.split(" ");
        
         for(var j=0;j<6;j++){
             if(user_number[j]>= 1 && user_number[j]<=45){
@@ -127,7 +103,7 @@
                     if(j != d){
                         if(user_number[j] == user_number[d]){
                             alert("중복된 번호를 확인해주세요.")
-                            return false;
+                            break;
                         }else{  
                             console.log(user_number[j])
                         }
@@ -137,9 +113,34 @@
                 alert("값을 다시입력해주세요");
                 user.focus();
                 user.value= null;
-                break;
+                return false;
             }
         }
+        var lotto_number = [];
+      
+        
+      // var a = [];
+      //    for(var i=0;i<6;i++){
+      //     a = Math.floor(Math.random()*45)+1
+      //         for(var j=0;j<1;j++){
+      //             b = Math.floor(Math.random()*45)+1
+      //             if(a != b){
+      //                 out += a + " ";             
+      //             }
+      //         }
+      //    }
+      var lotto_num = [];
+          while(lotto_num.length<6){
+              var n = parseInt(Math.random()*45)+1;
+              if(lotto_num.indexOf(n)<0){
+                  lotto_num.push(n);
+                  com_number.innerHTML= lotto_num;
+              }else if(user_number == " "){
+                  com_number.innerHTML= "null";
+              }
+          }
+          // 로또 번호 오름차순 정렬
+          lotto_num.sort((a, b) => a - b);
         var count = 0;
         user_number.sort((a, b) => a - b);
         
