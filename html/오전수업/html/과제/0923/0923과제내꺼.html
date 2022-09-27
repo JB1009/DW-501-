@@ -14,62 +14,89 @@
               height: auto; 
               margin: 100px auto;
               }   
-              
+        p{text-align: center;
+            width: 50px;
+            margin: 0 auto;
+            color: lightskyblue;
+        }
+      
         #main{
             width: 1400px;
             height: 700px; 
             margin: 0 auto;
             display: flex;
         }      
-        #main p{margin-left: 50px;
-                }
         #user_main{
             width: 600px;
-            height: 500px;
-            margin-top: 100px;
-            
+            height: 700px;
+          
         }
         #com_main{
             width: 600px;
-            height: 500px;
-            margin-top: 100px;
-            margin-left: 70px;
-            
+            height: 700px;
+          
         }
-        #user_main .user_bingo{
-            display: flex;
-            width: 500px;
-            margin-left: 50px;
-        }
-        #user_main .user_bingo div{
-            border: 1px solid black;
-            width: 68px;
-            height: 98px;
-            line-height: 98px;
-            padding-left: 35px;
-            cursor: pointer;
-        }
-        #com_main .com_bingo{
-            display: flex;
-            width: 500px;
-            margin-left: 50px;
-        }
-        #com_main .com_bingo div{
-            border: 1px solid black;
-            width: 98px;
-            height: 98px;
-            line-height: 98px;
-            padding-left: 35px;
-        }
-        #result{
-           
-            margin-left: 100px;
-            width: 50px;
+        #button_wrap{
+            width: 200px;
+            height: 700px;
+            position: relative;
+            text-align: center;
         }
         #button{
-            margin-top: 380px;
-            margin-left: 92px;
-            width: 50px;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border:  1px solid lightcoral;
+            background: white;
+            color: lightcoral;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #button:hover{
+            background: lightcoral;
+            color: white;
+        }
+        #button2{
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border:  1px solid lightcoral;
+            background: white;
+            color: lightcoral;
+            position: absolute;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #button2:hover{
+            background: lightcoral;
+            color: white;
+        }
+        .user_bingo,.com_bingo{
+            width: 600px;
+            height: 120px;
+            display: flex;
+        }
+        .user_bingo div,.com_bingo div{
+            cursor: pointer;
+            text-align: center;
+            line-height: 110px;
+            height: 110px;
+            width: 110px;
+            background: lightskyblue;
+            border: 1px solid deepskyblue;
+            color: whitesmoke;
+            border-radius: 20px;
+            margin: 5px;
+        }
+        .user_bingo div:hover,.com_bingo div:hover{
+            color: lightskyblue;
+            background: lightpink;
         }
     </style>
 </head>
@@ -77,7 +104,7 @@
     <div id="wrap">
         <div id="main">
             <div id="user_main">
-                <p>유저</p>
+                <p class="p">유저</p>
                 <div class="user_bingo">
                     <div id="user_num1" onclick="user(1)"></div>
                     <div id="user_num2" onclick="user(2)"></div>
@@ -114,9 +141,9 @@
                     <div id="user_num25" onclick="user(25)"></div>
                 </div>
             </div>
-            <div>
-                <button onclick="che()" id="button">추첨</button>
-                <div id="result">결과</div>
+            <div id="button_wrap">
+                <button onclick="che()" id="button">시작</button>
+                <button onclick="rety()" id="button2">다시하기</button>
             </div>
             <div id="com_main">
                 <p>컴퓨터</p>
@@ -166,9 +193,27 @@
     var com_div = [];
     var count = 1;
     var user_check = [];
-    function che(){
-      
-            while (user_num.length < 25){0
+    var com_check = [];
+    var flag = 0;
+    var tr = false;
+
+    for(var i=0;i<25;i++){
+        user_check[i] = false;   
+        com_check[i] = false;
+    }
+    function str(){
+        user_num = [];
+        user_div =[];
+        com_num = [];
+        com_div = [];
+        count = 1;
+        user_check = [];
+        com_check = [];
+        for(var i=0;i<25;i++){
+            user_check[i] = false;   
+            com_check[i] = false;
+        }
+        while (user_num.length < 25){
                 var ran = parseInt(Math.random()*25)+1;
                 if(user_num.indexOf(ran) < 0){
                     user_num.push(ran);
@@ -188,61 +233,123 @@
                     user_div[i].innerHTML = user_num[i];
                     com_div[i].value = com_num[i];
                     com_div[i].innerHTML = com_num[i];
+                    com_div[i].style.background = "lightskyblue";
+                    user_div[i].style.background = "lightskyblue";
                 }
             }
-            
-        // var ArrNum = new Array(25);    
-        // var user_num = document.getElementById("user_num"+a);
-        // var com_num = document.getElementById("com_num"+a);
-        
-        // for(var i=0;i<ArrNum.length;i++) //우선 1~25를 순서대로 담는다.
-        //         ArrNum[i]=i+1;
-        // //셔플
-        // // ArrNum.sort(function(){return 0.5-Math.random()});
-        
-        // // 빙고체크를 위해 2차원에 담아준다.
-        // var ArrNum2 = [];
-        // var x = 0; // 2차원에 담기위한 임시 변수
-        // var insert = []; // 2차원에 담기위한 임시 배열
-        // var called = ""; // 호출된 숫자들을 담을 변수.
-
-        // for(var i=0;i<ArrNum.length;i++){
-        //     insert[i%5] = ArrNum[i]; // 5개씩 담는다.
-        //     if((i+1)%5==0){ // 5개가 담기면 2차원 배열에 담고 insert[] 초기화
-        //         ArrNum2[x] = insert;
-        //         x++; // 5번에 한번 증가되야하므로 if문안에서 증가시킴
-        //         insert = [];
-        //     }
-        // }
-
-    }    
-    for(var i=0;i<25;i++){
-        user_check[i] = false; 
-        if((user_check[0] == true && user_check[1] ==true && user_check[2] == true && user_check[3] == true && user_check[4] == true)){
-        alert("check")
+            flag=1;
     }
-
+    function che(){
+      tr = true;
+      if(flag == 0){
+            str();
+        }else{
+            alert("한번만 눌러주세요.");
+            
+        }     
+        // confirm("다시하겠습니까?")
     }    
+    function rety(){
+        if(flag == 1){
+        str();
+        tr = true;
+        }
+
+        
+    }
+    
+    function user_bingo_check(name){
+
+    // for(var i=0;i<25;i++){
+   
+    if((name[0]&&name[1]&&name[2]&&name[3]&&name[4]) == true|| (name[0]&&name[5]&&name[10]&&name[15]&&name[20]) == true || 
+       (name[0]&&name[6]&&name[12]&&name[18]&&name[24]) == true|| (name[4]&&name[8]&&name[12]&&name[16]&&name[20]) == true){
+        alert("유저 빙고 승리");
+        tr = false;
+    }
+    if((name[5]&&name[6]&&name[7]&&name[8]&&name[9]) == true|| (name[1]&&name[6]&&name[11]&&name[16]&&name[21]) == true){
+        alert("유저 빙고 승리");
+        tr = false;
+    }
+    if((name[10]&&name[11]&&name[12]&&name[13]&&name[14]) == true|| (name[2]&&name[7]&&name[12]&&name[17]&&name[22]) == true){
+        alert("유저 빙고 승리");
+        tr = false;
+    }
+    if((name[15]&&name[16]&&name[17]&&name[18]&&name[19]) == true|| (name[3]&&name[8]&&name[13]&&name[18]&&name[19]) == true){
+        alert("유저 빙고 승리");
+        tr = false;
+    }
+    if((name[20]&&name[21]&&name[22]&&name[23]&&name[24]) == true || (name[4]&&name[9]&&name[14]&&name[19]&&name[20]) == true){
+        alert("유저 빙고 승리");
+        tr = false;
+    }
+    
+    // if(name[0])
+    // }    
+
+}
+function com_bingo_check(name){
+
+// for(var i=0;i<25;i++){
+
+if((name[0]&&name[1]&&name[2]&&name[3]&&name[4]) == true|| (name[0]&&name[5]&&name[10]&&name[15]&&name[20]) == true || 
+   (name[0]&&name[6]&&name[12]&&name[18]&&name[24]) == true|| (name[4]&&name[8]&&name[12]&&name[16]&&name[20]) == true){
+    alert("컴퓨터 빙고 패배");
+  
+}
+if((name[5]&&name[6]&&name[7]&&name[8]&&name[9]) == true|| (name[1]&&name[6]&&name[11]&&name[16]&&name[21]) == true){
+    alert("컴퓨터 빙고 패배");
+  
+}
+if((name[10]&&name[11]&&name[12]&&name[13]&&name[14]) == true|| (name[2]&&name[7]&&name[12]&&name[17]&&name[22]) == true){
+    alert("컴퓨터 빙고 패배");
+  
+}
+if((name[15]&&name[16]&&name[17]&&name[18]&&name[19]) == true|| (name[3]&&name[8]&&name[13]&&name[18]&&name[19]) == true){
+    alert("컴퓨터 빙고 패배");
+  
+}
+if((name[20]&&name[21]&&name[22]&&name[23]&&name[24]) == true || (name[4]&&name[9]&&name[14]&&name[19]&&name[20]) == true){
+    alert("컴퓨터 빙고 패배");
+  
+}
+
+// if(name[0])
+// }    
+
+}
+    
     function user(a){
+       if(tr !=  true){
+        alert("시작버튼을 누르세요");
+        return false;
+       }
         var user_number = document.getElementById("user_num"+a);
         for(var i=1;i<26;i++){
             var com_number = document.getElementById("com_num"+i);
-            user_number.style.background = 'gray';
-            user_check[i-1] = true;
-                if(user_number.value == com_number.value){
-                    com_number.style.background = 'gray';
-                }
+            user_number.style.background = 'lightpink';
+            if(user_number.value == com_number.value){
+            com_number.style.background = 'lightpink';
+           
+            com_check[i-1] = true;
+
+            console.log(com_check);
             }
-         
- 
-            // for(var i=0;i<5;i++){
-  
-}
-    
-    
-    function bingo(){
+        user_check[a-1] = true;
        
+        // console.log(user_check);
+        }        
+        user_bingo_check(user_check);
+        com_bingo_check(com_check);
+
 }
+    
+
+   function com_bingo_click(){
+     
+   }
+
+
 
 </script>
 </html>
