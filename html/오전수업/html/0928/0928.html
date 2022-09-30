@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{
+      display: flex;
+    }
+    li{
+      list-style-type: none;
+      margin-right: 10px;
+      width: 1000px;
+      text-align: center;
+    }
+    /* .li{
+      list-style-type: none;
+      margin-right: 10px;
+      width: 40px;
+      text-align: center;
+    } */
+   #result{
+    display: flex;
+    margin-left: 50px;
+   }
+   #result li{
+    width: 66px;
+    
+   }
+   /* ul{
+    display: flex;
+   } */
+  </style>
+  <script type="text/javascript">
+    window.onload = function(){
+      document.getElementById("files").addEventListener("change",readFile);
+    }
+    async function readFile(files){
+      var res1 = document.getElementById("res1");
+      var res2 = document.getElementById("res2");
+      var res3 = document.getElementById("res3");
+      var res4 = document.getElementById("res4");
+      var res5 = document.getElementById("res5");
+      var res6 = document.getElementById("res6");
+      var res7 = document.getElementById("res7");
+      var res8 = document.getElementById("res8");
+      // var res1 = document.getElementById("result").value;
+      var out = "";
+      var file = files.target.files[0];
+      if(!file){
+        return;
+      }
+      var lotto_num = await file.text();
+      lotto = lotto_num.split("\n");
+      var list = "회차 <br>"
+      var data = "발표일 <br>"
+      var num1 = "번호1 <br>"
+      var num2 = "번호2 <br>"
+      var num3 = "번호3 <br>"
+      var num4 = "번호4 <br>"
+      var num5 = "번호5 <br>"
+      var num6 = "번호6 <br>"
+      for(let i in lotto){
+        var tmp = lotto[i].split("\t");
+        list += tmp[0]+"<br>"
+        data += tmp[1]+"<br>"
+        num1 += tmp[2]+"<br>"
+        num2 += tmp[3]+"<br>"
+        num3 += tmp[4]+"<br>"
+        num4 += tmp[5]+"<br>"
+        num5 += tmp[6]+"<br>"
+        num6 += tmp[7]+"<br>"
+      }
+     res1.innerHTML = list;
+     res2.innerHTML = data;
+     res3.innerHTML = num1;
+     res4.innerHTML = num2;
+     res5.innerHTML = num3;
+     res6.innerHTML = num4;
+     res7.innerHTML = num5;
+     res8.innerHTML = num6;
+    
+      
+      // console.log(lotto[1]);
+      // res.innerHTML = out;
+      // var res1 = document.getElementById("res1");
+      // var res2 = document.getElementById("res2");
+      // var res3 = document.getElementById("res3");
+      // var res4 = document.getElementById("res4");
+      // var res5 = document.getElementById("res5");
+      // var res6 = document.getElementById("res6");
+      // var res7 = document.getElementById("res7");
+      // var res8 = document.getElementById("res8");
+      // var out = "";
+          // var file = files.target.files[0];
+          // if(!file){
+          //   return;
+          // }
+          // var lotto = await file.text();
+          // lotto = lotto.split("\t");
+          
+          //   res1.innerHTML = lotto[0];
+          //   res2.innerHTML = lotto[1];
+          //   res3.innerHTML = lotto[2];
+          //   res4.innerHTML = lotto[3];
+          //   res5.innerHTML = lotto[4];
+          //   res6.innerHTML = lotto[5];
+          //   res7.innerHTML = lotto[6];
+            // res8.innerHTML = lotto[7];
+            // for(var i = 0;i<lotto.length;i++){
+            // res2.innerHTML = lotto[];
+            // }
+
+    }
+    // var lotto_list = new Array();
+    // function lottos(){
+    //   var out = "";
+    //   for(let i in lotto_list){
+    //     out += lotto_list[i] + "<br>";
+    //   }
+    // }
+        // var cnt = document.getElementById("cnt").value;
+      // var number = new Array(45);
+      // number.fill(0); //배열 45개 공간 0으로 초기화
+      // for (var i in list) {
+      //   var temp = list[i].split("\t");
+      //   for (var j = 2; j < temp.length; j++) {
+      //     number[parseInt(temp[j]) - 1]++;
+      //   }
+      // }
+      // var view = "";
+      // for (var i in number) {
+      //   if(number[i] == 0){
+      //   view += "<div>" + (parseInt(i) + 1) + " - > " + number[i] + "개 </div>"
+      // }if(number[i] >= 15){
+      //   view += "<div>" + (parseInt(i) + 1) + " - > " + number[i] + "개 </div>"
+      // }
+      // document.getElementById("list").innerHTML = view;
+      // }
+  </script>
+</head>
+<body>
+  <div>
+  <input type="file" id="files">
+</div>
+  <ul>
+    <li class="li" id="res1">회차</li>
+    <li class="li" id="res2">발표일</li>
+    <li id="res3">번호1</li>
+    <li id="res4">번호2</li>
+    <li id="res5">번호3</li>
+    <li id="res6">번호4</li>
+    <li id="res7">번호5</li>
+    <li id="res8">번호6</li>
+  </ul>
+
+</div>
+<div>
+  <!-- <input type="button" onclick="lottos()" value="로또회차"> -->
+</div>
+</body>
+<script>
+
+</script>
+</html>

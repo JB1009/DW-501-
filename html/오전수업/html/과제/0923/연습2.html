@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="user_num1" onclick="user()">25</div>
+    <div id="com_num2">25</div>
+</body>
+<script>
+    function user(){
+        for(var i=1;i<5;i++){
+            var user = document.getElementById("user_num"+i);
+            var com = document.getElementById("com_num"+i);
+            if(user == com){
+                user.style.background = "gray";
+                com.style.background = 'gray';
+            }
+        }
+    }
+</script>
+</html>

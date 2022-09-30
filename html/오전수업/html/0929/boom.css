@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* boom.css */
+body,
+div,
+table,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  vertical-align: baseline;
+}
+
+#wrap {
+  background: #999;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+table {
+  width: 1000px;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  /* opacity: 0;   */
+  /* display: none; */
+}
+
+table tr td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}

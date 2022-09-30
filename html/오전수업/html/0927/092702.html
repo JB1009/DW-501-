@@ -1,38 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
   <script>
-    window.onload=function(){ //onload 는 브라우저에 출력된 이후를 뜻함 
-                              //window.onload는 브라우저에 모든 html이 출력된 이후
-      document.getElementById("docread").addEventListener("change",readFile);
+    window.onload = function () { //onload 는 브라우저에 출력된 이후를 뜻함 
+      //window.onload는 브라우저에 모든 html이 출력된 이후
+      document.getElementById("docread").addEventListener("change", readFile);
     };
-    async function readFile(e){
+    async function readFile(e) {
       var file = e.target.files[0];
       // aleat(file);
-      if(!file){ // 파일객체 존재 여부확인
+      if (!file) { // 파일객체 존재 여부확인
         return;
       }
       var text = await file.text();
-      text = text.split("\n");
-      document.write(text[0] + "<br>");
-      document.write(text[1] + "<br>");
-      }
-    
+      list = text.split("\n");
+      // text = text.split("\n");
+      // document.write(text[0] + "<br>");
+      // document.write(text[7] + "<br>");
+
+
+      // for (var i = 0; i < text.length; i++) {
+      //   document.write(text[i] + "<br>");
+      // }
+
+    }
+
     //   var reader = new FileReader(); // 파일을 불러오기 위한 리더 객체 생성
     //   reader.onload = function(e){
     //     filedata = e.target.result;
     //   };
     //   alert(reader.readAsText(file,"utf-8")); // 리더기를 통해 파일에 담겨있는 내용 가져오기.
     // }
-  </script> 
+    var list = new Array();
+    function out_list() {
+      var out = "";
+      for (let i in list) { //배열을위한 for문
+        out += list[i] + "<br>";
+
+      }
+      document.getElementById("list").innerHTML = out;
+    }
+    function search() {
+      var word = document.getElementById("word");
+      var name = word.value;// 검색어
+      for (let i in list) {
+        // var temp = list[i].split(" ");
+        // if (temp[0] == name) 
+        // indexOf 함수는 문자열 안에서 입력한문자열과 일치하는 위치를 찾아 인덱스를 반환.
+        // 예) "abcd".indexOf("bc") > 결과 1
+        if (list[i].indexOf(name) != -1) {
+          document.getElementById("list").innerHTML = list[i];
+          return;
+        }
+      }
+      document.getElementById("list").innerHTML = "검색결과가 없습니다."
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <style>
+    .srh_wrap {
+      display: flex;
+      margin-top: 10px;
+      border: 1px solid black;
+      width: 200px;
+
+    }
+
+    .srh_wrap input {
+      border: 0;
+      outline: none;
+      width: 180px;
+      color: black;
+    }
+  </style>
+
+
 </head>
+
 <body>
   <div>
     <input type="file" id="docread">
   </div>
+  <div>
+    <input type="button" onclick="out_list()" value="전체리스트">
+    <div class="srh_wrap">
+      <input type="search" id="word">
+      <span onclick="search()">
+        <i class="bi bi-search"></i>
+      </span>
+    </div>
+  </div>
+  <div id="list"></div>
+
 </body>
+
 </html>

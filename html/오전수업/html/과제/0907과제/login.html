@@ -67,20 +67,20 @@
     <div id="mid">
         <div class="LG">LG 전자 <span class="HW">회원 가입</span></div>
         <div class="mid_login">
-            <div>아이디</div>
-            <input type="text">
+            <div >아이디</div>
+            <input type="text"id="id_value">
         </div>
         <div class="mid_login">
-            <div>비밀번호</div>
-            <input type="password">
+            <div >비밀번호</div>
+            <input type="password" id="pw1">
         </div>
         <div class="mid_login">
             <div>비밀번호재입력</div>
-            <input type="password">
+            <input type="password" id="pw2">
         </div>
         <div class="mid_login">
             <div>이름</div>
-            <input type="text">
+            <input type="text" id="name">
         </div>
         <div class="mid_login">
             <div>연락처</div>
@@ -88,10 +88,10 @@
         </div>
         <div class="mid_login">
             <div>이메일</div>
-            <input type="text">
+            <input type="text" id="email_value">
         </div>
         <div class="end">
-            <a href="login_main.html">회원가입</a>
+            <a href="login_main.html" onclick="idValue()" id="hw">회원가입</a>
         </div>
     </div>
     <div class="bottom">
@@ -154,7 +154,32 @@
             }
             return str;
         }
+function idValue(){
+    var idval = document.getElementById("id_value").value;
+    var pw1 = document.getElementById("pw1").value;
+    var pw2 = document.getElementById("pw2").value;
+    var emval = document.getElementById("email_value").value;
+    var name = document.getElementById("name").value;
+    
+    if(idval != "lsw1432@naver.com"){
+        document.getElementById("hw").href = "login.html";
+        alert("이메일형태로 입력해주세요");
+    }
+    if(pw1 != pw2){
+        document.getElementById("hw").href = "login.html";
+        alert("비밀번호를 확인해주세요")
+    }
+      
+    if(emval != "lsw1432@naver.com"){
+        document.getElementById("hw").href = "login.html";
+        alert("이메일형태로 입력해주세요");
+    }
+    if(name != "이종빈"){
+        document.getElementById("hw").href = "login.html";
+        alert("이름을 확인해주세요")
+    }
 
+}
 var cellPhone = document.getElementById('cellPhone');
 cellPhone.onkeyup = function(event){
         event = event || window.event;

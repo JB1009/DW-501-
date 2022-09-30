@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table tr td {
+      border: 1px solid black;
+      /* border-radius: 5px; */
+      width: 50px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    // window.onload = function () {
+    //   document.getElementById("files").addEventListener("change", readFile);
+    // }
+    var list = new Array();
+    window.onload = function () {
+      document.getElementById("docread").addEventListener("change", readFile);
+    };
+    async function readFile(e) {
+      var file = e.target.files[0];
+      // aleat(file);
+      if (!file) { // 파일객체 존재 여부확인
+        return;
+      }
+      var text = await file.text();
+      list = text.split("\n");
+      make_list();
+    }
+
+
+    function make_list() {
+      var out = "<table>";
+      out += "<tr><th>회차</th><th>발표일</th><th>숫자1</th><th>숫자2</th><th>숫자3</th><th>숫자4</th><th>숫자5</th><th>숫자6</th></tr>"
+      for (var i in list) {
+        out += "<tr>"
+        let temp = list[i].split("\t");
+        for (var k in temp) {
+          out += "<td>" + temp[k] + "</td>";
+        }
+        out += "</tr>"
+      }
+      out += "</table>";
+      document.getElementById("list").innerHTML = out;
+    }
+
+    function appear() {
+      //당첨번호 시작 index 2 list[0].split("\t")[2];
+      var number = new Array(45);
+      number.fill(0); //배열 45개 공간 0으로 초기화
+      for (var i in list) {
+        var temp = list[i].split("\t");
+        for (var j = 2; j < temp.length; j++) {
+          number[parseInt(temp[j]) - 1]++;
+        }
+      }
+      var view = "";
+      for (var i in number) {
+        view += "<div>" + (parseInt(i) + 1) + " - > " + number[i] + "개 </div>"
+      }
+      document.getElementById("list").innerHTML = view;
+    }
+
+    function high_low() {
+
+      var cnt = document.getElementById("cnt").value;
+      var number = new Array(45);
+      number.fill(0);
+      for (var i = 0; i < cnt; i++) {
+        var temp = list[i].split("\t");
+        for (var k = 2; k < temp.length; k++) {
+          number[parseInt(temp[k]) - 1]++;
+        }
+      }
+      var show = "<h3>0번 출현한 숫자</h3>";
+      for (var i in number) {
+        if (number[i] == 0) {
+          show += "<div>" + (parseInt(i) + 1) + "</div>"
+        }
+      }
+      show += "<h3>15번이상 출현한 숫자</h3>";
+      for (var i in number) {
+        if (number[i] >= 15) {
+          show += "<div>" + (parseInt(i) + 1) + "</div>"
+        }
+      } document.getElementById("list").innerHTML = show;
+    }
+
+
+
+  </script>
+</head>
+
+<body>
+  <div>
+    <input type="file" id="docread">
+    <button type="button" onclick="appear()">출현횟수</button>
+  </div>
+  <div>
+    <!-- 가장 최근 당첨 회차 부터 input 태그에 입력한 숫자 중에서 0번 출현한 숫자 또는 15번이상 출현한 숫자를찾아 출력 
+         예시) input입력숫자 10
+               1034회부터 1025회차까지 로또 당첨 번호 출현 횟수구하기
+               이중에서 0번나온 숫자 또는 15번이상나온 숫자 찾아 출력 -->
+
+    <input type="number" id="cnt">
+    <button type="button" onclick="high_low()"></button>
+  </div>
+  <div id="list"></div>
+</body>
+
+</html>

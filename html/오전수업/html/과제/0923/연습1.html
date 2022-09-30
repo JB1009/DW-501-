@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0;
+             padding: 0;
+             box-sizing: border-box;}
+        #strong{
+            width: 135px; 
+            margin: 0 auto;
+        }
+
+        #strong strong{
+            width: 100px;
+            font-size: 30px;
+            color: lightskyblue;
+        }
+        #wrap{width: 100%;
+              height: auto;
+              margin: 100px auto;
+        }   
+
+        #main{
+            width: 1200px;
+            height: 750px; 
+            margin: 0 auto;
+            display: flex;
+        }     
+
+        #main p{
+            width: 500px;
+            text-align: center;
+            color: skyblue;
+        }
+        #user_main{
+            width: 600px;
+            height: 600px;
+            margin-top: 100px;
+        }
+        #com_main{
+            width: 600px;
+            height: 600px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        #user_main .user_bingo{
+            display: flex;
+            width: 500px;
+            /* margin-left: px; */
+           
+        }
+        #user_main .user_bingo div{
+            border: 1px solid skyblue;
+            border-radius: 10px;
+            margin: 2px 2px;
+            width: 100px;
+            height: 98px;
+            line-height: 98px;
+            text-align:  center;
+            cursor: pointer;
+            z-index: 2;
+            background-color: skyblue;
+            color: whitesmoke;
+        }
+        #com_main .com_bingo{
+            display: flex;
+            width: 500px;
+            margin-left: 52px;
+           
+        }
+        #com_main .com_bingo div{
+            border: 1px solid skyblue;
+            border-radius: 10px;
+            margin: 2px 2px;
+            width: 98px;
+            height: 98px;
+            line-height: 98px;
+            text-align:  center;
+            z-index: 2;
+            background-color: skyblue;
+            color: whitesmoke;
+        }
+        #result{
+            margin-left: 100px;
+            width: 50px;
+        }
+        #bt_st{
+            width: 100px;
+            margin: 0 auto;
+        }
+        #button{
+            margin-left: 92px;
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: 1px solid lightblue;
+            color: whitesmoke;
+            background: lightsteelblue;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="strong">
+           <strong>빙고 게임</strong>
+        </div>
+        <div id="main">
+            <div id="user_main">
+                <p>유저</p>
+                <div class="user_bingo" >
+                    <div id="user_num1" onclick="user(1)"></div>
+                    <div id="user_num2" onclick="user(2)"></div>
+                    <div id="user_num3" onclick="user(3)"></div>
+                    <div id="user_num4" onclick="user(4)"></div>
+                    <div id="user_num5" onclick="user(5)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num6" onclick="user(6)"></div>
+                    <div id="user_num7" onclick="user(7)"></div>
+                    <div id="user_num8" onclick="user(8)"></div>
+                    <div id="user_num9" onclick="user(9)"></div>
+                    <div id="user_num10" onclick="user(10)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num11" onclick="user(11)"></div>
+                    <div id="user_num12" onclick="user(12)"></div>
+                    <div id="user_num13" onclick="user(13)"></div>
+                    <div id="user_num14" onclick="user(14)"></div>
+                    <div id="user_num15" onclick="user(15)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num16" onclick="user(16)"></div>
+                    <div id="user_num17" onclick="user(17)"></div>
+                    <div id="user_num18" onclick="user(18)"></div>
+                    <div id="user_num19" onclick="user(19)"></div>
+                    <div id="user_num20" onclick="user(20)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num21" onclick="user(21)"></div>
+                    <div id="user_num22" onclick="user(22)"></div>
+                    <div id="user_num23" onclick="user(23)"></div>
+                    <div id="user_num24" onclick="user(24)"></div>
+                    <div id="user_num25" onclick="user(25)"></div>
+                </div>
+            </div>
+            <div>
+                
+            </div>
+            <div id="com_main">
+                <p style="margin-left: 50px;">컴퓨터</p>
+                <div class="com_bingo">
+                    <div id="com_num1"></div>
+                    <div id="com_num2"></div>
+                    <div id="com_num3"></div>
+                    <div id="com_num4"></div>
+                    <div id="com_num5"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num6"></div>
+                    <div id="com_num7"></div>
+                    <div id="com_num8"></div>
+                    <div id="com_num9"></div>
+                    <div id="com_num10"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num11"></div>
+                    <div id="com_num12"></div>
+                    <div id="com_num13"></div>
+                    <div id="com_num14"></div>
+                    <div id="com_num15"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num16"></div>
+                    <div id="com_num17"></div>
+                    <div id="com_num18"></div>
+                    <div id="com_num19"></div>
+                    <div id="com_num20"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num21"></div>
+                    <div id="com_num22"></div>
+                    <div id="com_num23"></div>
+                    <div id="com_num24"></div>
+                    <div id="com_num25"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="bt_st">
+        <button onclick="che()" id="button">번호 추첨</button>
+        </div>
+    </div>
+</body>
+<script>
+    var bt = document.getElementById("button");
+   var user_num = new Array(5);
+   var com_num = new Array(5);
+   var num = false;
+   var str = false;
+   function che(){
+                for(var i=1;i<=25;i++){
+                    var user_num = document.getElementById("user_num"+i);
+                    var com_num = document.getElementById("com_num"+i);
+                    user_num.style.background = "";
+                    com_num.style.background = "";
+                }
+        user_bingos();
+        com_bingos();
+
+        str = true;
+   }
+   function user_bingos(){
+        for(var i=0;i<user_num.length;i++){
+            user_num[i] = new Array(5);
+        }
+        var user_row = 0;
+        var user_col = 0;
+        for(var i=1;i<=25;i++){
+            var user_cho = document.getElementById("user_num"+i);
+            var user_ran_num = Math.floor(Math.random()*30)+1;
+            num = false;
+            for(var j=0;j<user_num.length;j++){
+                if(num){
+                    break
+                }
+                for(var z=0;z<user_num[j].length;z++){
+                    if(user_num[j][z] ==user_ran_num){
+                        num = true;
+                        i--;
+                        break
+                    }
+                }
+            }
+            if(!num){
+                user_num[user_row][user_col] = user_ran_num;
+                user_cho.innerHTML = user_num[user_row][user_col];
+                user_col++
+                if(user_col == 5){
+                    user_col = 0;
+                    user_row++;
+                }
+            }
+        }
+   }
+   function com_bingos(){
+        for(var i=0;i<com_num.length;i++){
+            com_num[i] = new Array(5);
+        }
+        var com_row = 0;
+        var com_col = 0;
+        for(var i=1;i<=25;i++){
+            var com_cho = document.getElementById("com_num"+i);
+            var com_ran_num = Math.floor(Math.random()*30)+1;
+            num = false;
+            for(var j=0;j<com_num.length;j++){
+                if(num){
+                    break;
+                }
+                for(var z=0;z<com_num[j].length;z++){
+                    if(com_num[j][z]== com_ran_num){
+                        num = true;
+                        i--; 
+                        break;
+                    }
+                }
+            }
+            if(!num){
+                com_num[com_row][com_col] = com_ran_num;
+                com_cho.innerHTML = com_num[com_row][com_col];
+                com_col++
+                if(com_col == 5){
+                    com_col = 0;
+                    com_row++;
+                }
+            }
+        }      
+   }
+   function user(a){
+   
+    // var ad = new Audio("tFile.mp3");
+     var num = parseInt(a/5);
+     if(a%5 == 0){
+        num--;
+     }
+     var col = (a-1)%5;
+    
+     if(user_num[num][col] != true){
+        if(user_num[num][col] == 1){
+           user_num[num][col] = false;
+        }   
+    }
+    // user_num[num][col] = true;
+     var click = document.getElementById("user_num"+a);
+     click.style.backgroundColor = "lightpink";
+     var audio2=new Audio("ad.mp3");
+        audio2.loop=true;// 반복재생하지 않음
+        audio2.volume=0.5;// 음량 설정
+        audio2.play();// sound2.mp3 재생
+        setTimeout(function(){// 1초 후 sound2.mp3 일시정지
+        audio2.pause();
+        },300);
+
+
+     var isCheck = true;
+     user_bingo_chk(a, isCheck);
+     com_bingo_chk(click.innerHTML,isCheck);
+
+    //  var com_num = document.getElementById("com_num"+a);
+    //  for(var i=1;i<26;i++){
+    //     if(com_num[num][col] == true){
+
+    //     }
+    //  }
+    }
+ function user_bingo_chk(chk_num , isCheck){
+    var bingo_count = 0;
+    var line_num = parseInt(chk_num / 5);
+    if(chk_num % 5 == 0){
+        line_num--;
+    }
+    var col_num = (chk_num-1) % 5;
+    user_num[line_num][col_num] = isCheck;
+    for(var i=0; i<5; i++){
+        if(user_num[i][i] == true){
+            bingo_count++;
+        }
+        if(bingo_count == 5){
+            alert("유저 승리");
+            str = true;
+            return;
+        }
+    }
+    bingo_count = 0;
+    user_num[line_num][col_num] = isCheck;
+    for(var i=0; i<5; i++){
+        if(user_num[i][4-i] == true){
+            bingo_count++;
+        }
+        if(bingo_count == 5){
+            alert("유저 승리");
+            str = true;
+            return;
+        }
+    }
+    for(var i = 0; i<5; i++){
+            var bingo_count = 0;
+            for(var j = 0; j<5; j++){
+                if(user_num[i][j] == true){
+                    bingo_count++;
+                }
+            }
+            if(bingo_count == 5){
+                alert("유저 승리");
+                str = true;
+                return;
+            }
+        }
+        for(var i = 0; i<5; i++){
+           bingo_count = 0;
+            for(var j = 0; j<5; j++){
+                if(user_num[j][i] == true){
+                    bingo_count++;
+                }
+            }
+            if(bingo_count == 5){
+                alert("유저 승리");
+                str = true;
+                return;
+            }
+        }
+ }     
+ function com_bingo_chk(chk_num , isCheck){
+    var bingo_count = 0;
+    for(var i=0; i<com_num.length; i++){
+        for(var j=0; j<com_num[i].length;j++){
+            if(com_num[i][j] == chk_num){
+                for(k=1;k<=25;k++){
+                    var search_num = document.getElementById("com_num"+k);
+                    if(search_num.innerHTML == chk_num){
+                        search_num.style.background = "lightpink";
+                    }
+                }
+                com_num[i][j] = isCheck;
+            }
+        }
+    }
+    // var col_num = (chk_num-1) % 5;
+    // user_num[line_num][col_num] = isCheck;
+    for(var i=0; i<5; i++){
+        if(com_num[i][i] == true){
+            bingo_count++;
+        }
+        if(bingo_count == 5){
+            alert("컴퓨터 승리");
+            str = true;
+            return;
+        }
+    }
+    bingo_count = 0;
+
+    for(var i=0; i<5; i++){
+        if(com_num[i][4-i] == true){
+            bingo_count++;
+        }
+        if(bingo_count == 5){
+            alert("컴퓨터 승리");
+            str = true;
+            return;
+        }
+    }
+    for(var i = 0; i<5; i++){
+            var bingo_count = 0;
+            for(var j = 0; j<5; j++){
+                if(com_num[i][j] == true){
+                    bingo_count++;
+                }
+            }
+            if(bingo_count == 5){
+                alert("컴퓨터 승리");
+                str = true;
+                return;
+            }
+        }
+        for(var i = 0; i<5; i++){
+            var bingo_count = 0;
+            for(var j = 0; j<5; j++){
+                if(com_num[j][i] == true){
+                    bingo_count++;
+                }
+            }
+            if(bingo_count == 5){
+                alert("컴퓨터 승리");
+                str = true;
+                return;
+            }
+        }
+ }
+
+</script>
+</html>
