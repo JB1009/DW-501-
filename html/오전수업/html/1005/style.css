@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+#wrap {
+  position: relative;
+  width: 800px;
+  margin: 50px auto;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#add {
+  float: right;
+}
+
+#score_wrap input {
+  height: 40px;
+  font-size: 17px;
+  border: 0;
+  border-bottom: 2px solid #4441c6;
+  text-align: center;
+}
+
+#kor,
+#mat,
+#eng {
+  width: 100px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+#score_wrap input:focus {
+  outline: none;
+}
+
+#score_wrap div{
+  display: flex;
+}
+#score_wrap div h3{
+  text-align: center;
+  width: 20%;
+}

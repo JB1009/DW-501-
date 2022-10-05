@@ -11,10 +11,23 @@
 
 </body>
 <script>
-    var a = 5;
-    var b = a++;
-
-    console.log(a);
-    console.log(b);
+   function solution(num, k) {
+    var answer = 0;
+    var array = new Array();
+    num = Math.floor(Math.random()*20231)+1;
+    var num1 = num.toString();
+        comsole.log(num1);
+    for(var i=0; i<array.length;i++){
+      
+        array[i] = num1.split("");
+        if(array[i] == k){
+            answer = i;
+        }
+        else if(array[i] != k){
+            answer = -1;
+        }
+    }
+    return answer;
+}
 </script>
 </html>
