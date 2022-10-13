@@ -1,0 +1,17 @@
+#box{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+table tr td{
+  border: 1px solid black;
+  text-align: center;
+  width: 80px;
+  height: 120px;
+  font-size: 35px;
+}
+
+.op{
+  background-color: #cecece;
+}

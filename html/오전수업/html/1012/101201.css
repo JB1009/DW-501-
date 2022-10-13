@@ -1,0 +1,30 @@
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#birth {
+  width: 200px;
+  height: 35px;
+  font-size: 17px;
+}
+
+#bt {
+  width: 100px;
+  height: 37px;
+  font-size: 15px;
+}
+
+#birthday {
+  width: 540px;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style-type: none;
+  margin-right: 20px;
+}

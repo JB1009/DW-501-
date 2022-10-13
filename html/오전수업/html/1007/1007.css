@@ -1,0 +1,24 @@
+
+
+#input_wrap{
+  width : 800px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#num1{
+  margin-top: 50px;
+}
+
+#input_wrap input,button{
+  width: 75px;
+  height: 25px;
+  /* margin: 0 auto; */
+}
+
+#send{
+  border: none;
+  height: 28px;
+  border-radius: 20px;
+  background: mediumspringgreen;
+}
