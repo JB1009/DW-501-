@@ -18,8 +18,6 @@ function tag_add() {
   var pdiv = document.getElementById("score_wrap");
   var div = document.createElement("div");
 
-  
-
   var ipt = document.createElement('input');
   ipt.setAttribute("type", "text");
   ipt.setAttribute("id", "name");
@@ -40,7 +38,6 @@ function tag_add() {
   bt.appendChild(text);
   div.appendChild(bt);
   pdiv.appendChild(div);
-
 }
 function enroll() {
   add_check = false;
