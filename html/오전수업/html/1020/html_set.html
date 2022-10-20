@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="bg">
+  <input type="number" id="font_size">
+  <button id="bt" onclick="cook_save()">쿠키저장</button>
+</body>
+<script>
+ function cook_save(){
+    var bg = document.getElementById("bg").value;
+    var fontSize = document.getElementById("font_size").value;
+    setCookie("bg",bg,3);
+    setCookie("fontSize",fontSize,3);
+    location.href = "index.html"
+ }
+ function setCookie(쿠키이름, 데이터, 유효기간) {
+    const day = new Date();
+    day.setTime(day.getTime() + (유효기간 * 24 * 60 * 60 * 1000));
+    let expires = 'expires = ' + day.toUTCString();
+    document.cookie = 쿠키이름 + "=" + 데이터 + ";" + expires + "; path=/";
+  }
+</script>
+
+</html>

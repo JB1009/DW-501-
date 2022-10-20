@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 180px;
+    }
+
+    #col,
+    #row {
+      margin-left: 16px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+  
+  </style>
+</head>
+<script>
+  function send_value() {
+    var col = document.getElementById("col").value;
+    var row = document.getElementById("row").value;
+    var width = document.getElementById("width").value;
+    var height = document.getElementById("height").value;
+    var div = "";
+    for (var i = 0; i < col; i++) {
+      div += "<div class='divs'>";
+      for (var j = 0; j < row; j++) {
+        div += "<div class='divss'style=' width:" + width + "px; height:" + height + "px;'></div>"
+      }
+      div += "</div>";
+    }
+
+    opener.document.getElementById("table_view").innerHTML = div;
+  }
+</script>
+
+<body>
+  <div>
+    <label for="col">행</label>
+    <input type="number" id="col">
+    <label for="row">열</label>
+    <input type="number" id="row">
+    <br>
+    <label for="width">너비</label>
+    <input type="number" id="width">
+    <label for="height">높이</label>
+    <input type="number" id="height">
+  </div>
+  <button onclick="send_value()">전송</button>
+</body>
+
+</html>

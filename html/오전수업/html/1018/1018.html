@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function new_window() {
+      // alert(screen.height)
+      var Mwidth = screen.width;
+      var Mheight = screen.height;
+
+      var width = 500;
+      var height = 700;
+      var left = Mwidth / 2 - width / 2;
+      var top = Mheight / 2 - height / 2;
+      var url = "101801.html";
+      var win_name = " ";
+      var option = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+      var child = window.open(url, win_name, option);
+
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <h1>첫번째 윈도우</h1>
+  <input type="text" name="name" id="name" placeholder="이름">
+  <button onclick="new_window()">전송</button>
+  <input type="text" id="age">
+
+  <!--  
+    window 객체
+      location  객체 (주소)
+      document  객체 (출력 화면)
+      history   객체 (방문 내역)
+      screen    객체 (브라우저와 브라우저가 표시되는 모니터) 
+      navigator 객체 (브라우저 정보)
+
+    -->
+</body>
+
+</html>

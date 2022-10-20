@@ -54,3 +54,95 @@ repositories : 폴더들
 ~~~
 
 z index <- z축 값
+
+###
+- window 객체 - 최상위 객체
+- window 객체 : 브라우저를 열었을때 생성되는 상항 존재하는 객체
+- 속성 : classes , dafaultStatus,document,frame,history,length,location,navigator 등
+
+~~~
+ 1. classes : HTML 문서에서 정의된 모든 스타일 시트
+ 2. dafaultStatus : 상태바에 표시될 문자열 지정
+ 3. frame : window에 포함된 프레임수 반환
+    ->여러 프레임이 존재할 경우 배열형태로 표시 가능
+    (window.frames[0]) 
+ 4. history : window가 방문한 URL 정보
+ 5. innerHeight : 현재 브라우저의 document영역의 높이
+ 6. innerWidth : 현재 브라우저의 document영역의 너비
+ 7. location : 현재문서의 URL정보
+ 8. menubar : 메뉴바 표시 여부지정
+ 9. opener: open()함수로 생성된 윈도우 이름
+ 10. name : window 이름
+ 11. outerHeight : 윈도우 밖 테두리 높이
+ 12. outerWidth : 윈도우 밖 테두리 너비
+ 13. pageXOffset : window에 표시되는 X 위치
+ 14. pageYOffset : window에 표시되는 Y 위치
+ 15. scrollbars : 스크롤바 표시 여부
+ ~~~
+
+ ###
+ window 객체 메서드
+
+ ~~~
+- alert() : 메세지와 OK버튼을 가진 메세지 박스
+- setInterval : 지정된 시간만큼 반복
+- setTimeout : 지정된 시간이후에 실행
+- clearIntertval : setInterval 해제
+- clearTimeout : setTimeout 해제
+- close() : window 닫기
+- confirm() : 질문 다이얼로그 확인과 취소 버튼을 가진 박스
+- back,forward : 뒤,앞으로 이동
+- moveBy(x,y) : 윈도우이동(상대적) 
+- moveTo(x,y) : 윈도우이동(절대적)
+- resizeBy(x,y) : 윈도우크기변경(상대적)
+- resizeTo(x,y) : 윈도우크기변경(절대적)
+~~~
+```
+- open : 새윈도우 생성
+      -> open(url.window_name property)
+      -> url : 페이지주소
+      -> window_name : 
+                    -> _blank : 새창에 열린다.
+                    -> _parent : 부모 프레임에 열린다.
+                    -> _self : 현재 페이지를 대체한다.
+                    -> _top : 로드된 프레임셋 대체
+```
+~~~
+- property : 새 window의 옵션부여
+  heigth : 새창의 높이 지정
+  width : 새창의 너비 지정
+  left : 모니터화면 왼쪽에서부터 위치
+  right : 모니터화면 오른쪽에서부터 위치        
+  top : 모니터 화면 위쪽에서부터 위치
+~~~
+### 특정브라우저
+~~~
+- channelmode : 전체화면 (yes OR no)
+- fullscreen  : 전체화면 (yes OR no)
+- location    : 주소표시줄 표시여부 (yes OR no)
+- menubar     : 메뉴바 표시여부 (yes OR no)
+- scrollbar   : 스크롤바 표시여부 (yes OR no)
+- status      : 상태바 표시여부 (yes OR no)
+- resizable   : window 크기 변경 가능여부 (yes OR no)
+- toobar      : 툴바 표시여부 (yes OR no)
+~~~ 
+
+- MDN 
+- W3 schools
+### screen
+~~~
+- screen : 화면 정보 제공
+- screen.width : 화면의 전체 너비
+- screen.height : 화면의 전체 높이
+- screen.availWidth : 실제 사용 가능한 화면 너비
+- screen.availHeight : 실제 사용 가능한 화면 높이
+- screen.colorDepth : 사용 가능한 색상 수
+- screen.pixelDepth : 한픽셀 당 비트 수
+~~~     
+
+### documnet 객체
+~~~
+ document.write("title : " + document.title);
+ document.write("마지막 수정 : " + document.lastModified)
+ document.write("배경색 : " + document.bgColor)
+~~~
