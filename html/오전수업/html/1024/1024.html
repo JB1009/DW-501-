@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas" width="2000" height="1200"></canvas>
+</body>
+<script>
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "rgb(163, 41, 41)";
+  ctx.fillRect(600,310,85,150)
+
+  ctx.fillStyle = "green"
+  // ctx.fillRect(400,300,70,100)
+  ctx.beginPath();
+  ctx.moveTo(500,500);
+  ctx.lineTo(1000,200);
+  ctx.lineTo(1500,500);
+  ctx.closePath();
+  ctx.fillStyle = "#48f81c";
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = "#ccbf04";
+  ctx.fillRect(500,500,1000,550)
+
+
+  ctx.beginPath();
+  ctx.arc(625,240,30,0,2*Math.PI,true);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(72, 72, 187)";
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(560,180,25,0,2*Math.PI,true);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(72, 72, 187)";
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(500,140,20,0,2*Math.PI,true);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(72, 72, 187)";
+  ctx.fill();
+  ctx.stroke();
+
+</script>
+</html>

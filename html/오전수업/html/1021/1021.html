@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<body>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // document.write("appName : "+ navigator.appName + "<br>");
+  // document.write("appCodeName : "+ navigator.appCodeName + "<br>");
+  // document.write("appVersion : "+ navigator.appVersion + "<br>");
+  // document.write("platform : "+ navigator.platform + "<br>");
+  // document.write("userAgent : "+ navigator.userAgent + "<br>");
+
+  // var os = navigator.userAgent;
+  // if(os.toLowerCase().indexOf("windows") != -1){
+  //   alert("현제 접속기기는 PC입니다.")
+  // }
+  // else if(os.toLowerCase().indexOf("android") != -1){
+  //   alert("현재 접속기기는 모바일(안드로이드)입니다")
+  // }
+  // else if(os.toLowerCase().indexOf("iphone") != -1){
+  //   alert("현재 접속기기는 모바일(아이폰)입니다")
+  // }
+
+  // var orient = window.orientation;
+  // if(orient == 0){
+  //   alert("세로방향");
+  // }
+  // else if(orient == -90){
+  //   alert("가로방향");
+  // }
+
+  const label = [ // 배열 형태
+    "2018", '2019', '2020', '2021', '2022'
+  ];
+
+  const data = {
+    labels: label,
+    datasets: [{
+      label: 'ㅇㅇㅇㅇㅇ',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [88,77,99,55,66],
+    }]
+  };
+  const config = {
+    type: 'bar',
+    data: data
+  }
+  const chat = new Chart(document.getElementById("myChart"),config);
+</script>
+</html>

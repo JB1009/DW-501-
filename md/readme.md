@@ -146,3 +146,49 @@ z index <- z축 값
  document.write("마지막 수정 : " + document.lastModified)
  document.write("배경색 : " + document.bgColor)
 ~~~
+
+
+### history 객체
+~~~
+사용자의 웹사이트 사용 내역
+ - history.length : 히스토리 목록에 포함된 URL의 수
+ - history.back() : 뒤로 이동
+ - history.forward() : 앞으로 이동
+ - history.go(N) : 현재 URL 위치에서 N만큼 앞으로 이동(음수(N)만큼 뒤로 이동)
+~~~
+
+### location 객체
+~~~
+현재 윈도우의 URL 주소에 대한 정보 제공 객체
+ - location.host : 호스트 이름과 포트번호(URL로부터 분리하여 제공)
+                   www.naver.com:80
+
+ - location.href : 하이퍼링크로 주소지정
+ - location.pathname : 디렉토리 위치
+ - location.port : 호스트 포트번호
+ - location.portocol : 프로토콜 종류
+ - location.reload() : 문자 다시읽기
+ - window.location.assign(URL) : URL로 이동(방문기록 저장)
+ - window.location.replace(URL) : URL로 이동(방문기록 덮어쓰기)
+ ~~~
+
+ ### navigator 객체
+ 웹 브라우저의 특성 정보를 가지는 객체
+~~~
+ - navigator.appName : 사용중인 브라우저 종류
+ - navigator.appCodeName : 사용중인 웹브라우저 이름
+ - navigator.appVersion : 브라우저 버전 및 OS이름
+ - navigator.platform : 운영체제 환경
+ - navigator.userAgent : 웹브라우저 종류와 버전
+ - navigator.plugins : 설치된 플러그인 정보
+ - navigator.mimeTypes : 브라우저에서 지원되는 mime 타입
+ ~~~
+
+ ~~~ 
+ mime 종류 : text. image , audio, video,application,message,multiport
+
+ image - gif.jpeg
+ video - mpeg
+ application - streaam,script
+
+ 
