@@ -17,15 +17,25 @@
  function cook_save(){
     var bg = document.getElementById("bg").value;
     var fontSize = document.getElementById("font_size").value;
-    setCookie("bg",bg,3);
-    setCookie("fontSize",fontSize,3);
-    location.href = "index.html"
+    // setCookie("bg",bg,3);
+    // setCookie("fontSize",fontSize,3);
+    // location.href = "index.html"
+    setarr();
  }
- function setCookie(쿠키이름, 데이터, 유효기간) {
-    const day = new Date();
-    day.setTime(day.getTime() + (유효기간 * 24 * 60 * 60 * 1000));
-    let expires = 'expires = ' + day.toUTCString();
-    document.cookie = 쿠키이름 + "=" + 데이터 + ";" + expires + "; path=/";
+//  function setCookie(쿠키이름, 데이터, 유효기간) {
+//     const day = new Date();
+//     day.setTime(day.getTime() + (유효기간 * 24 * 60 * 60 * 1000));
+//     let expires = 'expires = ' + day.toUTCString();
+//     document.cookie = 쿠키이름 + "=" + 데이터 + ";" + expires + "; path=/";
+//   }
+
+  function setarr(){
+    var arr = new Array();
+    var bg = document.getElementById("bg");
+    // var font = document.getElementById("font_size");
+    arr.push(bg)
+    console.log(arr)
+    return arr
   }
 </script>
 
